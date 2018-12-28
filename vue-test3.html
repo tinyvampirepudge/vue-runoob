@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 模板语法</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        .class1 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+
+    <div v-html="htmlMessage"></div>
+
+    <label for="r1">修改颜色</label><input type="checkbox" v-model="class1" id="r1">
+    <br><br>
+    <div v-bind:class="{'class1':class1}">
+        v-bind:class 指令
+    </div>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!',
+            htmlMessage: '<h1>菜鸟教程</h1>',
+            class1: false
+        }
+    })
+</script>
+
+</body>
+</html>

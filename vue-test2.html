@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js起步</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="vue_det">
+    <h1>site : {{site}}</h1>
+    <h1>url : {{url}}</h1>
+    <h1>alexa : {{alexa}}</h1>
+    <h1>{{details()}}</h1>
+</div>
+
+<script type="text/javascript">
+    // 我们的数据对象
+    var data = {
+        site: '菜鸟教程',
+        url: 'www.runoob.com',
+        alexa: '10000'
+    }
+
+    var vm = new Vue({
+        el: '#vue_det',
+        data: data,
+        methods: {
+            details: function () {
+                return this.site + ' - 学的不仅是技术，更是梦想！';
+            }
+        }
+    })
+
+    // 这里也引用data对象。
+    document.write(vm.site === data.size)
+    document.write('<br>')
+    // 设置属性也会影响到原始数据
+    vm.site = 'Runoob'
+    document.write(data.site + '<br>')
+
+    // 反之亦然
+    data.alexa = 123456123123
+    document.write(vm.alexa)
+    document.write('<br>')
+
+    // 通过$获取Vue特有属性
+    document.write(vm.$data === data)// true
+    document.write('<br>')
+    document.write(vm.$el === document.getElementById('vue_det'))// true
+
+</script>
+
+</body>
+</html>
