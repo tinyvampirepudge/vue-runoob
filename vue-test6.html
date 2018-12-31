@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 计算属性</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>原始字符串：{{message}}</p>
+    <!-- 直接计算 -->
+    <p>反转后的字符串：{{message.split('').reverse().join('')}}</p>
+
+    <!-- 使用computed -->
+    <P>反转后的字符串,computed：{{reverseMessage}}</P>
+
+    <!-- 使用methods -->
+    <p>反转后的字符串,methods:{{reverseMessage2()}}</p>
+
+    <!-- 打印site的值 -->
+    <p>
+        {{site}}
+    </p>
+</div>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: '猫了个咪啊，不要脸',
+            name: 'Google',
+            url: 'http:www.google.com'
+        },
+        computed: {
+            // 计算属性的 getter
+            reverseMessage: function () {
+                // `this` 指向app实例
+                return this.message.split('').reverse().join('')
+            },
+
+            // 自己提供setter
+            site: {
+                // getter
+                get: function () {
+                    return this.name + ' ' + this.url
+                },
+
+                // setter
+                set: function (newValue) {
+                    var names = newValue.split(' ')
+                    this.name = names[0]
+                    this.url = names[names.length - 1]
+                }
+
+            }
+        },
+        methods: {
+            reverseMessage2: function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+    // 调用 setter, app.name和app.url也会被对应更新
+    app.site = '菜鸟教程 http:www.runoob.com';
+    document.write('name: ' + app.name);
+    document.write('<br>');
+    document.write('url: ' + app.url);
+</script>
+
+</body>
+</html>
