@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 监听属性</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <p style="font-size:25px;">计数器：{{ counter }}</p>
+    <button @click="counter++" style="font-size:25px;">点我</button>
+</div>
+
+<script type="text/javascript">
+    let app = new Vue({
+        el: '#app',
+        data: {
+            counter: 1
+        }
+    });
+    app.$watch('counter', function (nval, oval) {
+        alert('计数器值的变化：' + oval + ' 变为 ' + nval + '!');
+    });
+
+</script>
+
+</body>
+</html>
