@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 组件 props</title>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <input v-model="parentMsg">
+        <br>
+        <child v-bind:message="parentMsg"></child>
+        <br>
+        <br>
+
+        <ol>
+            <todo-item v-for="item in sites" v-bind:todo="item"></todo-item>
+        </ol>
+    </div>
+</div>
+<script>
+    Vue.component('child', {
+        // 声明 props
+        props: ['message'],
+        // 同样也可以在vm实例中像 'this.message' 这样使用
+        template: '<span>{{ message }}</span>'
+    })
+
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+    })
+
+    let app = new Vue({
+        el: '#app',
+        data: {
+            parentMsg: '父组件内容',
+            sites: [
+                {text: 'Runoob'},
+                {text: 'Goggle'},
+                {text: 'Taobao'},
+            ]
+        }
+    })
+</script>
+
+</body>
+</html>
