@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 事件处理器</title>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <button v-on:click="counter += 1">增加1</button>
+    <p>这个按钮被点击了 {{ counter }} 次。</p>
+
+    <!-- greet 是在下面定义的方法名 -->
+    <button v-on:click="greet">Greet</button>
+
+    <button v-on:click="say('hello')">say('hello')</button>
+    <button v-on:click="say('seattle')">say('seattle')</button>
+</div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            name: 'Vue.js'
+        },
+        // 在`methods`对象中定义方法
+        methods: {
+            greet: function (event) {
+                // this 在这里值当前 Vue 实例
+                alert(`Hello ${this.name}!`)
+                // event 是元素DOM时间
+                if (event) {
+                    alert(event.target.tagName)
+                }
+            },
+            say: function (message) {
+                alert(message)
+            }
+        }
+    })
+
+    // 也可以用 JavaScript 直接调用方法
+    app.greet()
+</script>
+
+</body>
+</html>
