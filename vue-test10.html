@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 样式绑定</title>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        /*.active {*/
+        /*width: 100px;*/
+        /*height: 100px;*/
+        /*background: green;*/
+        /*}*/
+
+        /*.text-danger {*/
+        /*background: red;*/
+        /*}*/
+
+        /*.base {*/
+        /*width: 100px;*/
+        /*height: 100px;*/
+        /*}*/
+
+        /*.active {*/
+        /*background: green;*/
+        /*}*/
+
+        /*.text-danger {*/
+        /*background: red;*/
+        /*}*/
+
+        .text-danger {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .active {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!--<div v-bind:class="{ active: isActive }"></div>-->
+    <!-- 以上实例 div class 为： -->
+    <!--<div class="active"></div>-->
+
+    <!--<div id="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>-->
+
+    <!-- 以上实例 div class 为： -->
+    <!--<div class="static active text-danger"></div>-->
+
+    <!--<div v-bind:class="classObject"></div>-->
+
+    <!--<div v-bind:class="classObject"></div>-->
+
+    <!--<div v-bind:class="[activeClass, errorClass]"></div>-->
+    <!-- 以上实例 div class 为： -->
+    <!--<div class="active text-danger"></div>-->
+
+    <!--<div v-bind:class="[errorClass, isActive ? activeClass : '']"></div>-->
+
+    <!-- 内联样式 -->
+    <!--<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">菜鸟教程</div>-->
+    <!-- 以上实例 div style 为： -->
+    <!--<div style="color: green; font-size: 30px">菜鸟教程啊</div>-->
+
+    <!--<div v-bind:style="styleObject">菜鸟教程 styleObject</div>-->
+
+    <div v-bind:style="[baseStyles, overridingStyles]">菜鸟教程 [baseStyle, overridingStyle]</div>
+</div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            // isActive: true,
+            // hasError: true,
+            // classObject: {
+            //     active: true,
+            //     'text-danger': true
+            // }
+
+            // isActive: true,
+            // error: {
+            //     value: true,
+            //     type: 'fatal'
+            // }
+
+            // activeClass: 'active',
+            // errorClass: 'text-danger'
+
+            // isActive: true,
+            // activeClass: 'active',
+            // errorClass: 'text-danger'
+
+            // activeColor: 'green',
+            // fontSize: 30
+
+            // styleObject: {
+            //     color: 'green',
+            //     fontSize: '30px'
+            // }
+
+            baseStyles: {
+                color: 'green',
+                fontSize: '30px'
+            },
+            overridingStyles: {
+                color: 'blue',
+                fontSize: '30px',
+                'font-weight': 'bold'
+            }
+        },
+        // computed: {
+        //     classObject: function () {
+        //         return {
+        //             base: true,
+        //             active: this.isActive && !this.error.value,
+        //             'text-danger': this.error.value && this.error.type === 'fatal',
+        //         }
+        //     }
+        // }
+    })
+</script>
+
+</body>
+</html>
