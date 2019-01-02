@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5cc45cd-5bff-4d2f-bef1-215a15bae077" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vue-test16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-test17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-test18.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-test19.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-test20.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,11 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue-test19.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="114">
+              <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue-test20.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -107,6 +113,7 @@
         <option value="$PROJECT_DIR$/vue-test17.html" />
         <option value="$PROJECT_DIR$/vue-test18.html" />
         <option value="$PROJECT_DIR$/vue-test19.html" />
+        <option value="$PROJECT_DIR$/vue-test20.html" />
       </list>
     </option>
   </component>
@@ -156,10 +163,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.vue-test19.html">
-    <configuration name="vue-test15.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/runoob/vue-test15.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.vue-test20.html">
     <configuration name="vue-test16.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/runoob/vue-test16.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -172,13 +176,16 @@
     <configuration name="vue-test19.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/runoob/vue-test19.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="vue-test20.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/runoob/vue-test20.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.vue-test20.html" />
         <item itemvalue="JavaScript Debug.vue-test19.html" />
         <item itemvalue="JavaScript Debug.vue-test18.html" />
         <item itemvalue="JavaScript Debug.vue-test17.html" />
         <item itemvalue="JavaScript Debug.vue-test16.html" />
-        <item itemvalue="JavaScript Debug.vue-test15.html" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +199,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545965431318</updated>
-      <workItem from="1545965433994" duration="35125000" />
+      <workItem from="1545965433994" duration="35980000" />
     </task>
     <task id="LOCAL-00001" summary="Vue.js 模板语法">
       <created>1545990956846</created>
@@ -233,7 +240,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35125000" />
+    <option name="totallyTimeSpent" value="35980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="842" extended-state="6" />
@@ -445,10 +452,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vue-test19.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="114">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-test20.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
         </state>
       </provider>
     </entry>

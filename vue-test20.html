@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 自定义指令</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <p>页面载入时，input元素自动获取焦点：</p>
+    <input v-focus placeHolder="我是第一个">
+    <input v-focus1 placeHolder="我是第二个">
+</div>
+
+<script>
+    Vue.directive('focus', {
+        inserted: function (el) {
+            el.focus()
+        }
+    })
+
+    let app = new Vue({
+        el: '#app',
+        directives: {
+            // 注册一个局部的自定义指令 v-focus1
+            focus1: {
+                inserted: function (el) {
+                    el.focus()
+                }
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
