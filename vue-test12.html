@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js 表单 输入框</title>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>input元素</p>
+    <input v-model="message" placeholder="编辑我……">
+    <p>消息是: {{ message }}</p>
+
+    <p>textarea 元素：</p>
+    <p style="white-space: pre">{{ message2 }}</p>
+    <textarea v-model="message2" placeholder="多行文本输入……"></textarea>
+</div>
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Runoob',
+            message2: '菜鸟教程\r\nhttp:www.runoob.com'
+        }
+    })
+</script>
+
+</body>
+</html>
